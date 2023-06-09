@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-dev",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "git.rebaseWhenSync": true,
+        "remote.restoreForwardedPorts": false,
+        "remote.autoForwardPorts": false,
+        "typescript.preferences.quoteStyle": "single"
+      },
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "wesbos.theme-cobalt2",
+        "vscjava.vscode-maven",
+        "EditorConfig.EditorConfig",
+        "dzhavat.git-cheatsheet", // always nice to have this
+        "PKief.material-icon-theme",
+        "ms-azuretools.vscode-docker",
+        "adpyke.codesnap" // share beautiful code snipptes with your colleagues / for your documentation
+      ]
+    }
+  },
+  "service": "nodejs-dev",
+  "workspaceFolder": "/src",
+  "remoteUser": "root",
+  //"postStartCommand": "groovy printDevContainer.groovy ",
+  "shutdownAction": "stopCompose"
+}
