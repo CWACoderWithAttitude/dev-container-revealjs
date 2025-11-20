@@ -1,0 +1,14 @@
+{
+  "name": "revealjs-watcher",
+  "private": true,
+  "dependencies": {
+    "@asciidoctor/reveal.js": "^5.2.0",
+    "asciidoctor": "^3.0.4"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  },
+  "scripts": {
+    "watch:adoc": "chokidar \"*/*.adoc\" -c \"make convert\" --initial"
+  }
+}

@@ -1,6 +1,8 @@
 {
-  "name": "nodejs-dev",
-  "dockerComposeFile": ["docker-compose.yml"],
+  "name": "revealjs-slides",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
@@ -9,24 +11,28 @@
         "editor.formatOnSaveMode": "file",
         "git.rebaseWhenSync": true,
         "remote.restoreForwardedPorts": false,
-        "remote.autoForwardPorts": false,
+        "remote.autoForwardPorts": true,
         "typescript.preferences.quoteStyle": "single"
       },
       "extensions": [
         "streetsidesoftware.code-spell-checker",
         "wesbos.theme-cobalt2",
-        "vscjava.vscode-maven",
         "EditorConfig.EditorConfig",
-        "dzhavat.git-cheatsheet", // always nice to have this
+        "dzhavat.git-cheatsheet",
         "PKief.material-icon-theme",
         "ms-azuretools.vscode-docker",
-        "adpyke.codesnap" // share beautiful code snipptes with your colleagues / for your documentation
+        "adpyke.codesnap",
+        "ritwickdey.LiveServer",
+        "yandeu.five-server",
+        "asciidoctor.asciidoctor-vscode"
       ]
     }
   },
-  "service": "nodejs-dev",
+  "service": "revealjs-slides",
   "workspaceFolder": "/src",
-  "remoteUser": "root",
+  //"remoteUser": "root",
   //"postStartCommand": "groovy printDevContainer.groovy ",
+  "postCreateCommand": "npm i --save asciidoctor @asciidoctor/reveal.js && npm install",
+  // "postStartCommand": "npm run watch:adoc",
   "shutdownAction": "stopCompose"
 }

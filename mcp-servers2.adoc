@@ -1,0 +1,429 @@
+
+
+= Einführung in MCP Server
+:revealjs_theme: black
+:revealjs_transition: slide
+:source-highlighter: highlightjs
+:icons: font
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.5.0
+:source-highlighter: highlight.js
+:revealjs_slideNumber: true,c/t
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_progress: true
+:revealjs_center: true
+:revealjs_controls: true
+:revealjs_keyboard: true
+:revealjs_overview: true
+
+== Was ist MCP?
+
+[.columns]
+=== 
+
+[.column]
+--
+*Model Context Protocol*
+
+Ein offener Standard für die Kommunikation zwischen KI-Assistenten und externen Datenquellen
+--
+
+[.column]
+--
+image::https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=MCP[MCP Logo]
+--
+
+[NOTE.speaker]
+--
+MCP steht für Model Context Protocol und wurde von Anthropic entwickelt
+--
+
+== Das Problem
+
+=== Ohne MCP
+
+[.step]
+* Jede Integration muss einzeln programmiert werden
+* Keine standardisierte Schnittstelle
+* Hoher Wartungsaufwand
+* Schwierige Skalierung
+
+[.notes]
+--
+Stellen Sie sich vor, Sie müssten für jede App auf Ihrem Smartphone eine eigene Sprache lernen
+--
+
+=== !
+
+image::https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Chaos[Chaos ohne Standard]
+
+== Die Lösung: MCP
+
+=== Mit MCP
+
+[.step]
+* ✓ Einheitlicher Standard
+* ✓ Wiederverwendbare Komponenten
+* ✓ Einfache Integration
+* ✓ Große Flexibilität
+
+== Wie funktioniert MCP?
+
+=== Die drei Komponenten
+
+[.columns]
+=== 
+
+[.column]
+--
+*MCP Host* +
+(z.B. Claude)
+
+Der KI-Assistent
+--
+
+[.column]
+--
+*MCP Server* +
+(z.B. Google Drive)
+
+Die Datenquelle
+--
+
+[.column]
+--
+*Protocol* +
+(MCP Standard)
+
+Die Verbindung
+--
+
+=== Kommunikationsfluss
+
+[source,text]
+----
+┌─────────┐         ┌────────────┐         ┌──────────┐
+│  Claude │ ◄─────► │ MCP Server │ ◄─────► │  Google  │
+│  (Host) │   MCP   │            │   API   │  Drive   │
+└─────────┘         └────────────┘         └──────────┘
+----
+
+[.step]
+1. Claude sendet Anfrage über MCP
+2. MCP Server übersetzt und ruft API auf
+3. Antwort wird zurück an Claude geliefert
+
+== Was kann ein MCP Server?
+
+=== Funktionen bereitstellen
+
+[.step]
+* Dateien lesen und schreiben
+* Datenbanken abfragen
+* APIs aufrufen
+* Tools und Aktionen ausführen
+
+=== Beispiele aus der Praxis
+
+[cols="1,2"]
+|===
+|Server |Funktion
+
+|Google Drive
+|Dokumente suchen und bearbeiten
+
+|Slack
+|Nachrichten senden und lesen
+
+|GitHub
+|Code-Repositories verwalten
+
+|PostgreSQL
+|Datenbankabfragen durchführen
+|===
+
+== Vorteile von MCP
+
+=== Für Nutzer
+
+[.step]
+* Nahtlose Integration verschiedener Tools
+* Ein Interface für alles
+* Keine manuelle Dateneingabe mehr
+* Intelligente Workflows
+
+=== Für Entwickler
+
+[.step]
+* Standardisierte Schnittstelle
+* Wiederverwendbarer Code
+* Aktive Community
+* Schnelle Entwicklung
+
+=== Für Unternehmen
+
+[.step]
+* Reduzierte Entwicklungskosten
+* Bessere Skalierbarkeit
+* Vendor-unabhängig
+* Zukunftssicher
+
+== Architektur im Detail
+
+=== MCP Server Struktur
+
+[source,text]
+----
+MCP Server
+├── Resources
+│   └── Daten bereitstellen
+├── Tools
+│   └── Aktionen ausführen
+├── Prompts
+│   └── Vorlagen anbieten
+└── Transport
+    └── Kommunikation
+----
+
+=== Resources (Ressourcen)
+
+*Was sind Resources?*
+
+Daten, die der Server bereitstellt
+
+[.step]
+* Dateien
+* Datenbankeinträge
+* API-Antworten
+* Statische Inhalte
+
+=== Tools (Werkzeuge)
+
+*Was sind Tools?*
+
+Aktionen, die der Server ausführen kann
+
+[.step]
+* `create_file()` - Datei erstellen
+* `search_database()` - Datenbank durchsuchen
+* `send_email()` - E-Mail versenden
+* `calculate()` - Berechnung durchführen
+
+=== Prompts (Vorlagen)
+
+*Was sind Prompts?*
+
+Vordefinierte Gesprächsvorlagen
+
+[.step]
+* Standardabfragen
+* Best Practices
+* Häufige Workflows
+* Kontextuelle Hilfe
+
+== Ein praktisches Beispiel
+
+=== Szenario: Reiseplanung
+
+*Aufgabe:* "Plane meine Geschäftsreise nach Berlin"
+
+=== Ohne MCP
+
+[.step]
+1. Kalender öffnen → Termine prüfen
+2. Flugbuchungsseite öffnen → Flug suchen
+3. Hotel-Website öffnen → Zimmer buchen
+4. E-Mail schreiben → Team informieren
+5. Spesen-Tool öffnen → Budget eintragen
+
+[.fragment]
+⏱️ *Zeit:* 45-60 Minuten
+
+=== Mit MCP
+
+[.step]
+1. Claude mit MCP Servern verbinden:
+   * Kalender-Server
+   * Reise-Server
+   * E-Mail-Server
+   * Spesen-Server
+2. Eine Anfrage stellen
+3. Claude koordiniert alles automatisch
+
+[.fragment]
+⏱️ *Zeit:* 2-3 Minuten
+
+== MCP Server entwickeln
+
+=== Technologie-Stack
+
+[.step]
+* *Python* - Am weitesten verbreitet
+* *TypeScript/Node.js* - Für Web-Entwickler
+* *Andere Sprachen* - SDK in Entwicklung
+
+=== Einfaches Beispiel (Python)
+
+[source,python]
+----
+from mcp.server import Server
+from mcp.types import Tool
+
+server = Server("mein-server")
+
+@server.tool()
+async def berechne_summe(a: int, b: int) -> int:
+    """Addiert zwei Zahlen"""
+    return a + b
+
+# Server starten
+server.run()
+----
+
+[.notes]
+--
+So einfach kann ein MCP Server sein - nur wenige Zeilen Code
+--
+
+=== Was macht dieser Code?
+
+[.step]
+1. Importiert MCP Bibliotheken
+2. Erstellt einen Server
+3. Definiert ein Tool (Funktion)
+4. Startet den Server
+
+[.fragment]
+✨ *Ergebnis:* Claude kann jetzt Zahlen addieren!
+
+== Best Practices
+
+=== Sicherheit
+
+[.step]
+* ✓ Authentifizierung implementieren
+* ✓ Berechtigungen prüfen
+* ✓ Eingaben validieren
+* ✓ Sensible Daten schützen
+
+=== Performance
+
+[.step]
+* ✓ Caching nutzen
+* ✓ Asynchrone Operationen
+* ✓ Timeouts setzen
+* ✓ Fehlerbehandlung
+
+=== Dokumentation
+
+[.step]
+* ✓ Tools klar beschreiben
+* ✓ Beispiele bereitstellen
+* ✓ Limitierungen erwähnen
+* ✓ API-Dokumentation pflegen
+
+== Die MCP Community
+
+=== Wachsendes Ökosystem
+
+[.step]
+* 100+ öffentliche MCP Server
+* Aktive GitHub Community
+* Regelmäßige Updates
+* Offener Standard
+
+=== Beliebte MCP Server
+
+[.step]
+* Filesystem - Dateiverwaltung
+* Git - Versionskontrolle
+* Postgres - Datenbank
+* Puppeteer - Browser-Automation
+* Time - Zeit und Datum
+
+== Zukunft von MCP
+
+=== Vision
+
+[quote]
+Ein universeller Standard für KI-Integration in alle Tools und Systeme
+
+=== Entwicklungen
+
+[.step]
+* Mehr offizielle SDKs
+* Enterprise-Features
+* Verbesserte Sicherheit
+* Größeres Ökosystem
+
+== Erste Schritte
+
+=== Wie fange ich an?
+
+[.step]
+1. *Als Nutzer:* +
+   MCP Server in Claude aktivieren
+
+2. *Als Entwickler:* +
+   Dokumentation auf modelcontextprotocol.io
+
+3. *Experimentieren:* +
+   Einfache Server ausprobieren
+
+=== Ressourcen
+
+* 🌐 https://modelcontextprotocol.io
+* 📚 https://github.com/modelcontextprotocol
+* 💬 Community Foren
+* 📖 Beispiel-Repositories
+
+== Zusammenfassung
+
+=== Key Takeaways
+
+[.step]
+* MCP = Standard für KI ↔ Tool Integration
+* Vereinfacht Entwicklung erheblich
+* Wachsendes Ökosystem
+* Zukunftssichere Technologie
+* Für jeden zugänglich
+
+== Demo Time! 
+
+=== Live Beispiel
+
+[.step]
+* RMV Server (Rhein-Main-Verkehrsverbund)
+* Funktionen:
+** Stationen suchen
+** Verbindungen finden
+** Echtzeit-Daten
+
+[.fragment]
+💡 *Zeigt:* Wie einfach Integration sein kann
+
+== Fragen?
+
+=== 
+
+[.big]
+*Vielen Dank!*
+
+icon:envelope[] fragen@example.com
+
+icon:github[] github.com/mcp-servers
+
+icon:globe[] modelcontextprotocol.io
+
+== Bonus: Hands-On Workshop
+
+=== Nächste Schritte
+
+[.step]
+1. MCP SDK installieren
+2. Ersten Server erstellen
+3. In Claude testen
+4. Eigenen Use Case entwickeln
+
+[.fragment]
+🚀 *Lasst uns loslegen!*
