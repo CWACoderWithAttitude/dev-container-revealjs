@@ -1,5 +1,3 @@
-
-
 = Einführung in MCP Server
 :revealjs_theme: black
 :revealjs_transition: slide
@@ -18,20 +16,31 @@
 
 == Was ist MCP?
 
-[.columns]
-=== 
+[cols="1,1"]
+|===
+| *Model Context Protocol*
 
-[.column]
---
-*Model Context Protocol*
+| image::https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=MCP[MCP Logo]
+|===
+=== History
 
-Ein offener Standard für die Kommunikation zwischen KI-Assistenten und externen Datenquellen
---
+Entwickelt vomn Antropic
 
-[.column]
---
-image::https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=MCP[MCP Logo]
---
+und
+
+im November 2024 released.
+
+
+
+=== Anthropics Description?
+
+Too verbose for now. Please find https://www.anthropic.com/news/model-context-protocol[Details here].
+
+.Summary
+[%step]
+* Break the information silos between AI models and external data sources
+* Standardize communication between AI models and tools
+* Enable developers to create reusable integrations
 
 [NOTE.speaker]
 --
@@ -40,15 +49,22 @@ MCP steht für Model Context Protocol und wurde von Anthropic entwickelt
 
 == Das Problem
 
+LLMs like Claude, Mistral, ChatGPT... are powerfull tools.
+
+But there are boundries:
+- They are limited to their training data
+- `Grounding` is no real solution for business problems.
+- They have no built-in access to external data or tools.
+// Integrating them with various services requires custom code for each service, leading to high maintenance and scalability issues.
+
 === Ohne MCP
 
 [.step]
-* Jede Integration muss einzeln programmiert werden
-* Keine standardisierte Schnittstelle
-* Hoher Wartungsaufwand
-* Schwierige Skalierung
-
-[.notes]
+* Each Integration requires custom code.
+* No standardization
+* Hard to maintain
+* Difficult to scale
+[NOTE.speaker]
 --
 Stellen Sie sich vor, Sie müssten für jede App auf Ihrem Smartphone eine eigene Sprache lernen
 --
@@ -62,43 +78,35 @@ image::https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Chaos[Chaos ohne S
 === Mit MCP
 
 [.step]
-* ✓ Einheitlicher Standard
-* ✓ Wiederverwendbare Komponenten
-* ✓ Einfache Integration
-* ✓ Große Flexibilität
+* ✓ Common Protocol across different services
+* ✓ Standardized communication
+* ✓ Reusable components
+* ✓ Easy integration
+* ✓ High flexibility
 
 == Wie funktioniert MCP?
 
-=== Die drei Komponenten
+=== How does it work?
 
-[.columns]
-=== 
-
-[.column]
---
-*MCP Host* +
+[cols="1,1,1"]
+|===
+| *MCP Host* + 
 (z.B. Claude)
 
-Der KI-Assistent
---
+The AI assistant
 
-[.column]
---
-*MCP Server* +
+| *MCP Server* + 
 (z.B. Google Drive)
 
-Die Datenquelle
---
+The data source
 
-[.column]
---
-*Protocol* +
+| *Protocol* + 
 (MCP Standard)
 
-Die Verbindung
---
+The connection
+|===
 
-=== Kommunikationsfluss
+=== Communication Flow
 
 [source,text]
 ----
@@ -109,37 +117,64 @@ Die Verbindung
 ----
 
 [.step]
-1. Claude sendet Anfrage über MCP
-2. MCP Server übersetzt und ruft API auf
-3. Antwort wird zurück an Claude geliefert
+1. Claude sends request to MCP
+2. MCP Server translates and calls API
+3. Response is returned to Claude
 
-== Was kann ein MCP Server?
-
-=== Funktionen bereitstellen
+=== How are MCP Servers connected?
 
 [.step]
-* Dateien lesen und schreiben
-* Datenbanken abfragen
-* APIs aufrufen
-* Tools und Aktionen ausführen
+* Standard communication is via STDIO - local only
+* More modern approaches use HTTP/HTTPS - network & streaming
+* Previously SSE (Server-Sent Events) - now WebSockets
+* Future possibilities include gRPC and other protocols
 
-=== Beispiele aus der Praxis
+
+== Sicherheit und Datenschutz
+=== Sicherheitsmerkmale
+
+[.step]
+* Authentication and Authorization
+* Encrypted Communication
+* Secure Storage (TLS)
+* Input Validation
+* Access Controls
+
+=== Privacy Policies
+
+[.step]  
+* Minimierung der Datenweitergabe
+* Lokale Datenverarbeitung
+
+
+
+== What can an MCP Server do?
+
+=== Provide Functions
+
+[.step]
+* Read and write files
+* Query databases
+* Call APIs
+* Execute tools and actions
+
+=== Examples from Practice
 
 [cols="1,2"]
 |===
 |Server |Funktion
 
 |Google Drive
-|Dokumente suchen und bearbeiten
+|Search and edit documents
 
 |Slack
-|Nachrichten senden und lesen
+|Send and read messages
 
 |GitHub
-|Code-Repositories verwalten
+|Manage code repositories
 
 |PostgreSQL
-|Datenbankabfragen durchführen
+|Perform database queries
 |===
 
 == Vorteile von MCP
@@ -147,36 +182,36 @@ Die Verbindung
 === Für Nutzer
 
 [.step]
-* Nahtlose Integration verschiedener Tools
-* Ein Interface für alles
-* Keine manuelle Dateneingabe mehr
-* Intelligente Workflows
+* Seamless integration of various tools
+* One interface for everything
+* No more manual data entry
+* Intelligent workflows
 
-=== Für Entwickler
-
-[.step]
-* Standardisierte Schnittstelle
-* Wiederverwendbarer Code
-* Aktive Community
-* Schnelle Entwicklung
-
-=== Für Unternehmen
+=== For Developers
 
 [.step]
-* Reduzierte Entwicklungskosten
-* Bessere Skalierbarkeit
-* Vendor-unabhängig
-* Zukunftssicher
+* Standardized interface
+* Reusable code
+* Active community
+* Rapid development
 
-== Architektur im Detail
+=== FFor Businesses
 
-=== MCP Server Struktur
+[.step]
+* Reduced development costs
+* Better scalability
+* Vendor-independent solutions
+* Future-proof technology
+
+== Architecture in Detail
+
+=== MCP Server Structure
 
 [source,text]
 ----
 MCP Server
 ├── Resources
-│   └── Daten bereitstellen
+│   └── Provide data
 ├── Tools
 │   └── Aktionen ausführen
 ├── Prompts
@@ -221,6 +256,10 @@ Vordefinierte Gesprächsvorlagen
 * Häufige Workflows
 * Kontextuelle Hilfe
 
+== I've prepared an example
+
+The code for the RMV MCP Server is available https://github.com/CWACoderWithAttitude/rmv-mcp-server[on Github].
+We want to use RMV  
 == Ein praktisches Beispiel
 
 === Szenario: Reiseplanung
