@@ -2,33 +2,7 @@
 
 === How does it work?
 
-[cols="1,1,1"]
-|===
-| *MCP Host* + 
-(z.B. Claude)
-
-The AI assistant
-
-| *MCP Server* + 
-(z.B. Google Drive)
-
-The data source
-
-| *Protocol* + 
-(MCP Standard)
-
-The connection
-|===
-
-=== Communication Flow
-
-[source,text]
-----
-┌─────────┐         ┌────────────┐         ┌──────────┐
-│  Claude │ ◄─────► │ MCP Server │ ◄─────► │  Google  │
-│  (Host) │   MCP   │            │   API   │  Drive   │
-└─────────┘         └────────────┘         └──────────┘
-----
+image::images/mcp-server-env.png[MCP Server Environment Logo]
 
 [.step]
 1. Claude sends request to MCP
@@ -42,3 +16,27 @@ The connection
 * More modern approaches use HTTP/HTTPS - network & streaming
 * Previously SSE (Server-Sent Events) - now WebSockets
 * Future possibilities include gRPC and other protocols
+
+=== Architecture Diagram
+
+
+
+[source,text]
+----
+MCP Host (Claude)
+    |
+    |  MCP Protocol / Context
+    v
++--------------------+
+|    MCP Server      |
+|  - Transport       |
+|  - Auth & TLS      |
+|  - Tool Runner     |
+|  - Resource Adapters
++--------------------+
+   |      |       |
+   |      |       +--> Tools (exec, APIs)
+   |      +--> Resources (Drive, DB, FS)
+   +--> Transport (HTTP / WS / STDIO)
+   +--> Observability (logs, metrics, audit)
+----

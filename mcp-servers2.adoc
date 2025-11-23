@@ -13,6 +13,12 @@
 :revealjs_controls: true
 :revealjs_keyboard: true
 :revealjs_overview: true
+:revealjs_plugins: '[ "mermaid" ]'
+:revealjs_dependencies: >
+  [
+    { src: 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/mermaid/plugin.js', async: true },
+    { src: 'https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js', async: true }
+  ]
 
 == Was ist MCP?
 
@@ -20,7 +26,6 @@
 |===
 | *Model Context Protocol*
 
-| image::https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=MCP[MCP Logo]
 |===
 === History
 
@@ -30,6 +35,12 @@ und
 
 im November 2024 released.
 
+
+== Bild einfügen
+
+=== Beispiel für ein Bild
+
+image::https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop[Laptop with code, width=700]
 
 
 === Anthropics Description?
