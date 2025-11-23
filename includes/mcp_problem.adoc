@@ -1,0 +1,25 @@
+== The Problem
+
+LLMs like Claude, Mistral, ChatGPT... are powerfull tools.
+
+But there are boundries:
+- They are limited to their training data
+- `Grounding` is no real solution for business problems.
+- They have no built-in access to external data or tools.
+// Integrating them with various services requires custom code for each service, leading to high maintenance and scalability issues.
+
+=== Ohne MCP
+
+[.step]
+* Each Integration requires custom code.
+* No standardization
+* Hard to maintain
+* Difficult to scale
+[NOTE.speaker]
+--
+Stellen Sie sich vor, Sie müssten für jede App auf Ihrem Smartphone eine eigene Sprache lernen
+--
+
+=== !
+
+image::https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Chaos[Chaos ohne Standard]

@@ -47,87 +47,11 @@ Too verbose for now. Please find https://www.anthropic.com/news/model-context-pr
 MCP steht für Model Context Protocol und wurde von Anthropic entwickelt
 --
 
-== Das Problem
+include::includes/mcp_problem.adoc[]
 
-LLMs like Claude, Mistral, ChatGPT... are powerfull tools.
+include::includes/mcp_solution.adoc[]
 
-But there are boundries:
-- They are limited to their training data
-- `Grounding` is no real solution for business problems.
-- They have no built-in access to external data or tools.
-// Integrating them with various services requires custom code for each service, leading to high maintenance and scalability issues.
-
-=== Ohne MCP
-
-[.step]
-* Each Integration requires custom code.
-* No standardization
-* Hard to maintain
-* Difficult to scale
-[NOTE.speaker]
---
-Stellen Sie sich vor, Sie müssten für jede App auf Ihrem Smartphone eine eigene Sprache lernen
---
-
-=== !
-
-image::https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Chaos[Chaos ohne Standard]
-
-== Die Lösung: MCP
-
-=== Mit MCP
-
-[.step]
-* ✓ Common Protocol across different services
-* ✓ Standardized communication
-* ✓ Reusable components
-* ✓ Easy integration
-* ✓ High flexibility
-
-== Wie funktioniert MCP?
-
-=== How does it work?
-
-[cols="1,1,1"]
-|===
-| *MCP Host* + 
-(z.B. Claude)
-
-The AI assistant
-
-| *MCP Server* + 
-(z.B. Google Drive)
-
-The data source
-
-| *Protocol* + 
-(MCP Standard)
-
-The connection
-|===
-
-=== Communication Flow
-
-[source,text]
-----
-┌─────────┐         ┌────────────┐         ┌──────────┐
-│  Claude │ ◄─────► │ MCP Server │ ◄─────► │  Google  │
-│  (Host) │   MCP   │            │   API   │  Drive   │
-└─────────┘         └────────────┘         └──────────┘
-----
-
-[.step]
-1. Claude sends request to MCP
-2. MCP Server translates and calls API
-3. Response is returned to Claude
-
-=== How are MCP Servers connected?
-
-[.step]
-* Standard communication is via STDIO - local only
-* More modern approaches use HTTP/HTTPS - network & streaming
-* Previously SSE (Server-Sent Events) - now WebSockets
-* Future possibilities include gRPC and other protocols
+include::includes/mcp_how_does_it_work.adoc[]
 
 
 == Sicherheit und Datenschutz

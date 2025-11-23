@@ -1,0 +1,10 @@
+== Die Lösung: MCP
+
+=== Mit MCP
+
+[.step]
+* ✓ Common Protocol across different services
+* ✓ Standardized communication
+* ✓ Reusable components
+* ✓ Easy integration
+* ✓ High flexibility
