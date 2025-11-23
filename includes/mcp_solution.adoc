@@ -1,10 +1,10 @@
-== Die Lösung: MCP
+== Solution:
+*Model Context Protocol (MCP)*
 
-=== Mit MCP
+=== What's MCP?
 
 [.step]
-* ✓ Common Protocol across different services
-* ✓ Standardized communication
-* ✓ Reusable components
-* ✓ Easy integration
-* ✓ High flexibility
+* MCP Servers add access to resources like files, databases, APIs, and tools.
+* They communicate with LLMs using a standardized protocol.
+* MCP enables LLMs to perform actions and access up-to-date information.
+

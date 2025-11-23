@@ -1,16 +1,27 @@
-== Wie funktioniert MCP?
-
-=== How does it work?
+== How does it work?
 
 image::images/mcp-server-env.png[MCP Server Environment Logo]
 
+=== MCP Workflow
 [.step]
-1. Claude sends request to MCP
-2. MCP Server translates and calls API
-3. Response is returned to Claude
+1. User interacts with ChatBot (e.g., Claude)
+2. Traing data enables the AI to "understand" the User
+3. Claude sends request to MCP
+3.1 Based on thr User context the AI decides which MCP Server to call
+3.2 MCP Server uses its capabilities to access external resources
+3.3 MCP Server return data to Claude
+3.4 Claude generates response for User
+
+[.fragment]
+✨ *Result:* The User gets up-to-date information and actions performed by the AI!
+
+
+//4. MCP Server translates and calls API
+//5. Response is returned to Claude
 
 === How are MCP Servers connected?
 
+Anthropic
 [.step]
 * Standard communication is via STDIO - local only
 * More modern approaches use HTTP/HTTPS - network & streaming
