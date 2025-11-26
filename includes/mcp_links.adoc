@@ -3,6 +3,8 @@
 Weiterführende Links zum Thema:
 * links:https://www.heise.de/news/Warum-MCP-die-KI-Nutzung-auf-den-Kopf-stellt-10386848.html[Warum MCP die KI-Nutzung auf den Kopf stellt]
 * https://learn.microsoft.com/de-de/microsoft-copilot-studio/agent-extend-action-mcp[Erweitern Sie Ihren Agenten mit dem Modell-Kontextprotokoll (MCP)]
+* https://modelcontextprotocol.io/docs/sdk[Available SDKs]
+* https://github.com/modelcontextprotocol/python-sdk/issues/1068[Which SDK - FastMCP2 vs. official Python SDK]
 * https://www.anthropic.com/index/mcp[Anthropic MCP Übersicht]
 * https://mcpmarket.com/server/sharepoint[MCP Server für Sharepoint]
 * https://devblogs.microsoft.com/microsoft365dev/announcing-the-updated-teams-ai-library-and-mcp-support/[MS Teams MCP Support Ankündigung]

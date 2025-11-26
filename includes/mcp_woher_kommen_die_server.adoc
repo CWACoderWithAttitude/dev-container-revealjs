@@ -35,7 +35,7 @@ Ob diese nun mit einem MCP Server erschlossen werden sollen, ist sorgfältig zu 
 Wem ferige MCP Server nicht genügen bzw. nicht geheuer sind, der kann selber einen MCP Server bauen.
 
 [%step]
-* Es gibt SDK (Software Development Kits) von für die gängigen Sprachen.
+* Es gibt https://modelcontextprotocol.io/docs/sdk[SDKs (Software Development Kits) für die gängigen Sprachen].
 * Zum lokalen Testen steht ein Inspektor zur Verfügung
 * Beispiel-Implementierungen stehen bereit.
 * Es gibt eine starke Community.
