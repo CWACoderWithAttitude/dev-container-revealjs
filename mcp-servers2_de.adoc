@@ -1,5 +1,6 @@
 = Einführung in MCP Server - Skynet 1.x
-:revealjs_theme: black
+//:revealjs_theme: black
+:revealjs_theme: solarized
 :revealjs_transition: slide
 :source-highlighter: highlightjs
 :icons: font
@@ -22,11 +23,21 @@
 
 
 
+include::includes/mcp_wer_hats_erfunden.adoc[]
+
 include::includes/mcp_worum_geht_es.adoc[]
 //include::includes/mcp_worum_geht_es.adoc[]
 include::includes/mcp_worum_geht_es2.adoc[]
 
-//include::includes/mcp_how_do_llms_work.adoc[]
+
+include::includes/mcp_how_do_llms_work_de.adoc[]
+
+include::includes/mcp_architektur.adoc[]
+
+include::includes/mcp_how_does_it_work_de.adoc[]
+
+include::includes/mcp_woher_kommen_die_server.adoc[]
+
 //include::includes/mcp_kroki.adoc[]
 //include::includes/mcp_mermaid.adoc[]
 

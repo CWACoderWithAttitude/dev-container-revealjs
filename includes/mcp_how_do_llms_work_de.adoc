@@ -1,0 +1,22 @@
+== Wie arbeiten MCP Server?
+
+=== MCP Workflow, I
+    
+[%step]
+1. Der User stellt seine Anfrage über einen Chatbot
+(=> Context)
+2. Durch die Trainingsdaten (=> Model) "versteht" der ChatBot die Anfrage des Users
+3. ChatBot sendet die Anfrage an MCP-Server (=> Protocol)
+//4. MCP Server Based on the User context the AI decides which MCP Server to call
+
+=== MCP Workflow, II
+
+[.step]
+4. Je nach Anfrage "weiss" der Chatbot, welchen 
+MCP Server er fragen muss.
+5. MCP Server gibt die Antwort
+6. Der Bot erzeugt die Antwort für den User
+
+
+[.fragment]
+✨ *Ergebnis:* Der User erhält aktuelle Informationen und Aktionen, die von der KI ausgeführt werden!

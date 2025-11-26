@@ -14,15 +14,23 @@ Daten zu erschliessen,
 
 die einem traditionellen LLM (Large Language Model) nicht zur Verfügung stehen.
 
+
+=== USB-C für KI
+
+MCP Server sind Vermittler zwischen dem LLM und externen Datenquellen
+
 === Beipiele 
 
-Beispielsweise können MCP Server auf 
+Zugriff auf
 
 [%step]
 * firmeneigene Dokumente
 * Sharepoint
+* ERP-Systeme
+* Buchhaltungssysteme
 * Datenbanken
-* APIs zugreifen
+* APIs
 * Jiras / Confluence
+
 
 

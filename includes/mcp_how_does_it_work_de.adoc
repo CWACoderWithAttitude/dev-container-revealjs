@@ -1,0 +1,59 @@
+== How does it work DE?
+
+image::images/mcp-server-env.png[MCP Server Environment Logo]
+
+=== MCP Workflow, I
+    
+[.step]
+1. User interacts with ChatBot (e.g., Claude)
+2. Traing data enables the AI to "understand" the User
+3. Claude sends request to MCP
+4. MCP Server Based on the User context the AI decides which MCP Server to call
+
+=== MCP Workflow, II
+
+[.step]
+4. MCP Server Based on the User context the AI decides which MCP Server to call
+5. MCP Server uses its capabilities to access external resources
+6. MCP Server return data to Claude
+7. Claude generates response for User
+
+[.fragment]
+✨ *Result:* The User gets up-to-date information and actions performed by the AI!
+
+
+//4. MCP Server translates and calls API
+//5. Response is returned to Claude
+
+=== How are MCP Servers connected?
+
+Anthropic
+[.step]
+* Standard communication is via STDIO - local only
+* More modern approaches use HTTP/HTTPS - network & streaming
+* Previously SSE (Server-Sent Events) - now WebSockets
+* Future possibilities include gRPC and other protocols
+
+=== Architecture Diagram
+
+
+
+[source,text]
+----
+MCP Host (Claude)
+    |
+    |  MCP Protocol / Context
+    v
++--------------------+
+|    MCP Server      |
+|  - Transport       |
+|  - Auth & TLS      |
+|  - Tool Runner     |
+|  - Resource Adapters
++--------------------+
+   |      |       |
+   |      |       +--> Tools (exec, APIs)
+   |      +--> Resources (Drive, DB, FS)
+   +--> Transport (HTTP / WS / STDIO)
+   +--> Observability (logs, metrics, audit)
+----
