@@ -1,4 +1,4 @@
-= Einführung in MCP Server
+= Einführung in MCP Server - Skynet 1.x
 :revealjs_theme: black
 :revealjs_transition: slide
 :source-highlighter: highlightjs
@@ -57,6 +57,11 @@ Too verbose for now. Please find https://www.anthropic.com/news/model-context-pr
 --
 MCP steht für Model Context Protocol und wurde von Anthropic entwickelt
 --
+
+
+include::includes/mcp_how_do_llms_work.adoc[]
+include::includes/mcp_kroki.adoc[]
+include::includes/mcp_mermaid.adoc[]
 
 include::includes/mcp_problem.adoc[]
 
