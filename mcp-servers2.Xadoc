@@ -20,27 +20,27 @@
     { src: 'https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js', async: true }
   ]
 
-== Was ist MCP?
+//== Was ist MCP?
 
-[cols="1,1"]
-|===
-| *Model Context Protocol*
+//[cols="1,1"]
+//|===
+//| *Model Context Protocol*
 
-|===
-=== History
+//|===
+//=== History
 
-Entwickelt vomn Antropic
+//Entwickelt von Anthropic
 
-und
+//und
 
-im November 2024 released.
+//im November 2024 released.
 
 
-== Bild einfügen
+//== Bild einfügen
 
-=== Beispiel für ein Bild
+//=== Beispiel für ein Bild
 
-image::https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop[Laptop with code, width=700]
+//image::https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop[Laptop with code, width=700]
 
 
 === Anthropics Description?
@@ -59,11 +59,14 @@ MCP steht für Model Context Protocol und wurde von Anthropic entwickelt
 --
 
 
+include::includes/mcp_worum_geht_es.adoc[]
+include::includes/mcp_worum_geht_es2.adoc[]
+
 include::includes/mcp_how_do_llms_work.adoc[]
 include::includes/mcp_kroki.adoc[]
 include::includes/mcp_mermaid.adoc[]
 
-include::includes/mcp_problem.adoc[]
+include::includes/mcp_problem_de.adoc[]
 
 include::includes/mcp_solution.adoc[]
 

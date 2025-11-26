@@ -4,7 +4,8 @@
   "dependencies": {
     "@asciidoctor/reveal.js": "^5.2.0",
     "asciidoctor": "^3.0.4",
-    "asciidoctor-kroki": "^0.18.1"
+    "asciidoctor-kroki": "^0.18.1",
+    "chokidar": "^3.6.0"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0"
@@ -12,6 +13,6 @@
   "scripts": {
     "watch:adoc": "chokidar \"*/*.adoc\" -c \"make convert\" --initial",
     "check": "npx asciidoctor-revealjs --version",
-    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki mcp-servers2.adoc"
+    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki mcp-servers2_de.adoc"
   }
 }

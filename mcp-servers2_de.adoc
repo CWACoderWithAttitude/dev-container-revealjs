@@ -1,0 +1,39 @@
+= Einführung in MCP Server - Skynet 1.x
+:revealjs_theme: black
+:revealjs_transition: slide
+:source-highlighter: highlightjs
+:icons: font
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.5.0
+:source-highlighter: highlight.js
+:revealjs_slideNumber: true,c/t
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_progress: true
+:revealjs_center: true
+:revealjs_controls: true
+:revealjs_keyboard: true
+:revealjs_overview: true
+:revealjs_plugins: '[ "mermaid" ]'
+//:revealjs_dependencies: >
+//  [
+//    { src: 'https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/mermaid/plugin.js', async: true },
+//    { src: 'https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js', async: true }
+//  ]
+
+
+
+include::includes/mcp_worum_geht_es.adoc[]
+//include::includes/mcp_worum_geht_es.adoc[]
+include::includes/mcp_worum_geht_es2.adoc[]
+
+//include::includes/mcp_how_do_llms_work.adoc[]
+//include::includes/mcp_kroki.adoc[]
+//include::includes/mcp_mermaid.adoc[]
+
+//include::includes/mcp_problem_de.adoc[]
+
+//include::includes/mcp_solution.adoc[]
+
+//include::includes/mcp_how_does_it_work.adoc[]
+
+

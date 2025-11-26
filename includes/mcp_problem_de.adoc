@@ -1,0 +1,27 @@
+== Das Problem mit traditionellen LLMs
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Piles_of_abandoned_historical_papers_%2832929137350%29.jpg/2560px-Piles_of_abandoned_historical_papers_%2832929137350%29.jpg[LLMs - Large Language Models - werden mit existierenden Daten trainiert]
+
+
+=== Kenne ich nicht
+
+Daher sind sie auf diese Daten beschränkt und können keine aktuellen Informationen abrufen.
+
+[%step]
+* Es gibt Techniken wie `Grounding`, aber sie sind keine echte Lösung für Geschäftsprobleme.
+
+[.note.speaker]
+---
+Grounding ist Web-Recherche.
+---
+
+=== Was fehlt?
+
+[%step]
+* Zugriff auf aktuelle Informationen
+* Aktionen auf externen Systemen ausführen
+* Spezialisierte Werkzeuge oder Dienste nutzen  
+
+[.note.speaker]
+---
+bla bla 
+---

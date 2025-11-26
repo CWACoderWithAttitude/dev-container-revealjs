@@ -1,0 +1,5 @@
+== Wer hat's erfunden?
+[.text-center]
+Erfunden / entwickelt wurde MCP von Anthropic.
+
+[.text-center]
