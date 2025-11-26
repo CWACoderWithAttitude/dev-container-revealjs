@@ -52,3 +52,11 @@ Meine Frage:
 Wie komme ich von Friedberg zur apfelwein wagner?
 ```
 https://claude.ai/share/fbb9328e-d9aa-4d3a-84a1-6dc05d8abe5a[Chat-Protokoll]
+
+=== Beispiel: Wetter-Abfrage
+
+Eines der Standard-Beispiele: die Wetter Vorhersage.
+
+https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Mit MCP]
+
+https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Ohne MCP]
