@@ -11,8 +11,16 @@ All the rest should be covered by this setup.
 DevContainer implements the PaC pattern. Presentation As Code.
 Build beautiful presentations with AsciiDoc and RevealJS.
 
+== Contents
+* Based on a node image
+* Includes a fs watcher. A full rebuild is triggered once a change to a `.adoc` file is detected.
+* Include Five-Server for live preview
+
 == Why
-Writing presentations should be easy, light weight, versatile and platform agnostic. Using text with markup makes it simple and easy to add to verion control.
+I creating presentations to be easy and platform agnostic.
+Since i'm lazy as hell i created this setup.
+
+
 
 
 
