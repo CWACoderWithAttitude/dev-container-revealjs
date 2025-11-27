@@ -1,0 +1,61 @@
+== Beispiele
+
+=== Einfach Beispiel: Wetter-Abfrage
+
+Eines der Standard-Beispiele: die Wetter Vorhersage.
+
+https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Mit MCP]
+
+https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Ohne MCP]
+
+=== Ein wenig komplexer: RMV Fahrplanauskunft
+
+https://github.com/CWACoderWithAttitude/rmv-mcp-server[Ein Beispiel für einen selbst gebauten MCP Server ist die RMV Fahrplanauskunft].
+
+=== MCP Server mit den Tools:
+* get_connections => Von Start nach Ziel
+* search_stations => Wie heisst die Haltestelle
+
+Meine Frage:
+```
+Wie komme ich von Friedberg zur apfelwein wagner?
+```
+https://claude.ai/share/fbb9328e-d9aa-4d3a-84a1-6dc05d8abe5a[Chat-Protokoll]
+
+
+=== Hammer: Beispiel: Abfrage von Versicherungs-Produkten
+
+Die Abfrage fand über den Playwrigth MCP Server statt.
+
+Durch diesen kann eine automatiosche Websuche durchgeführt werden.
+
+Meine Frage:
+```
+Bitte gehe zur Helvetia-Homepage.
+Suche Produkte für Privatkunden.  
+Nenne mir Produkte für PV--Anlagen und Wärmepumpen.
+```
+
+https://claude.ai/share/bcddbbba-a919-427f-a287-8fb9b577cdc4[Die Antwort]
+
+=== Ober-Hammer: Noch genauer
+
+```
+Bitte gehe zur deutschen Helvetia-Homepage.
+Akzeptiere alle Cookies.
+Suche Produkte für Privatkunden.
+Nenne mir Produkte für PV--Anlagen und Wärmepumpen.
+Mache von allen gefundenen Produkten Screenshots.
+```
+https://claude.ai/share/bcddbbba-a919-427f-a287-8fb9b577cdc4[Hier die Suche und was gefunden wurde]
+
+=== Die Screenshots:
+
+=== Photovoltaik
+image::images/helvetia/photovoltaikversicherung.png[Helvetia Photovoltaik]
+=== Haus & Wohen Übersicht
+image::images/helvetia/haus-und-wohnen-uebersicht.png[Haus & Wohen Übersicht]
+=== Wohngebäude Erneuerbare Energien
+image::images/helvetia/wohngebaeudeversicherung-erneuerbare-energien.png[Wohngebäude Erneuerbare Energien]
+=== Wohngebäude-versicherung
+image::images/helvetia/wohngebaeudeversicherung.png[Wohngebäude-versicherung]

@@ -10,6 +10,8 @@ Anthropic wollte eine schnelle Akzeptanz erreichen:
 
 Kaufen passt hier oft nicht ganz.
 
+Das meiste ist frei verfügbar.
+
 Die Auswahl einsatzbereiter MCP Servern wächst beständig.
 
 === Zur Verfügung stehen MCP Server für
@@ -40,23 +42,3 @@ Wem ferige MCP Server nicht genügen bzw. nicht geheuer sind, der kann selber ei
 * Beispiel-Implementierungen stehen bereit.
 * Es gibt eine starke Community.
 
-=== Beispiel: RMV Fahrplanauskunft
-https://github.com/CWACoderWithAttitude/rmv-mcp-server[Ein Beispiel für einen selbst gebauten MCP Server ist die RMV Fahrplanauskunft].
-
-=== MCP Server mit den Tools:
-* get_connections => Von Start nach Ziel
-* search_stations => Wie heisst die Haltestelle
-
-Meine Frage:
-```
-Wie komme ich von Friedberg zur apfelwein wagner?
-```
-https://claude.ai/share/fbb9328e-d9aa-4d3a-84a1-6dc05d8abe5a[Chat-Protokoll]
-
-=== Beispiel: Wetter-Abfrage
-
-Eines der Standard-Beispiele: die Wetter Vorhersage.
-
-https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Mit MCP]
-
-https://claude.ai/share/c56ba03c-dccb-4bdc-8ca0-17b98e332523[Ohne MCP]
