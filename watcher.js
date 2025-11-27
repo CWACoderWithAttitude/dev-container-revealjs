@@ -1,23 +1,43 @@
+// ...existing code...
 import chokidar from 'chokidar';
+import { spawn } from 'child_process';
 
-// One-liner for current directory
-chokidar.watch('.').on('all', (event, path) => {
-  console.log(event, path);
-});
+const DEBOUNCE_MS = 300;
+let compileTimer = null;
 
-// Extended options
-// ----------------
+function runCompile() {
+  console.log('Running: npm run compile');
+  const p = spawn('npm', ['run', 'compile'], { stdio: 'inherit' });
+  p.on('error', (err) => console.error('Failed to start compile:', err));
+  p.on('exit', (code, signal) => {
+    if (code !== null) console.log(`compile exited with code ${code}`);
+    else console.log(`compile killed by signal ${signal}`);
+  });
+}
 
-// Initialize watcher.
-const watcher = chokidar.watch('file, dir, or array', {
-  ignored: (path, stats) => stats?.isFile() && !path.endsWith('.adoc'), // only watch js files
+function scheduleCompile() {
+  if (compileTimer) clearTimeout(compileTimer);
+  compileTimer = setTimeout(() => {
+    runCompile();
+    compileTimer = null;
+  }, DEBOUNCE_MS);
+}
+
+//const watcher = chokidar.watch('**/*.adoc', {
+const watcher = chokidar.watch('**/*.adoc', {
+  ignored: /(^|[\/\\])\../, // ignore dotfiles
+  ignoreInitial: false,
   persistent: true,
 });
 
-// Something to use when events are received.
-const log = console.log.bind(console);
-// Add event listeners.
 watcher
-  .on('add', (path) => log(`File ${path} has been added`))
-  .on('change', (path) => log(`File ${path} has been changed`))
-  .on('unlink', (path) => log(`File ${path} has been removed`));
+  .on('add', (path) => {
+    console.log(`File added: ${path}`);
+    scheduleCompile();
+  })
+  .on('change', (path) => {
+    console.log(`File changed: ${path}`);
+    scheduleCompile();
+  })
+  .on('unlink', (path) => console.log(`File removed: ${path}`))
+  .on('error', (err) => console.error('Watcher error:', err));

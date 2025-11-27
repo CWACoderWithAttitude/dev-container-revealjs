@@ -34,6 +34,6 @@
   //"remoteUser": "root",
   //"postStartCommand": "groovy printDevContainer.groovy ",
   "postCreateCommand": "npm i --save asciidoctor @asciidoctor/reveal.js && npm install",
-  // "postStartCommand": "npm run watch:adoc",
+  "postStartCommand": "npm run watch", //:adoc",
   "shutdownAction": "stopCompose"
 }

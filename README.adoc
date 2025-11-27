@@ -1,0 +1,19 @@
+= Containerized ASCIIDoctor Presentations
+
+== TL;DR
+DevContainer for crating presentation with Asciidoctor and RevealJS.
+
+== Requirements
+Just docker desktop or similar framework to run devcontainers. 
+All the rest should be covered by this setup.
+
+== What
+DevContainer implements the PaC pattern. Presentation As Code.
+Build beautiful presentations with AsciiDoc and RevealJS.
+
+== Why
+Writing presentations should be easy, light weight, versatile and platform agnostic. Using text with markup makes it simple and easy to add to verion control.
+
+
+
+

@@ -1,4 +1,5 @@
 = AsciiDoctor Presentation
+Volker Benders (CWA.Coder.With.Attitude@gmail.com)
 // :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2
 // :revealjs_transition: slide
 // :revealjs_controls: true
