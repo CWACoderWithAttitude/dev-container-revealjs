@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   revealjs-slides:
-    container_name: revealjs-slides
+    container_name: revealjs-slides-mcp
     hostname: revealjs-slides.local
     build:
       context: .

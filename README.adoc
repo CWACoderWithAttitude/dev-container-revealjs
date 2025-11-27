@@ -1,8 +1,0 @@
-= ASCIIDoctor+Reveal.js Presentations
-
-
-== Links
-* https://docs.asciidoctor.org/reveal.js-converter/latest/setup/standalone-executable/[Standalone Executable]
-* https://github.com/asciidoctor/asciidoctor-reveal.js/releases[Asciidoctor Reveal.js leases]
-Dev container NodeJS / TypeScript
-
