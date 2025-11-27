@@ -11,7 +11,7 @@
     "chokidar-cli": "^3.0.0"
   },
   "scripts": {
-    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki mcp-servers2_de.adoc",
+    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki presentation.adoc",
     "watch": "node ./watcher2.js"
   }
 }

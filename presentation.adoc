@@ -1,0 +1,39 @@
+= AsciiDoctor Presentation
+// :revealjsdir: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.9.2
+// :revealjs_transition: slide
+// :revealjs_controls: true
+// :revealjs_progress: true
+// :revealjs_center: true
+// :revealjs_hash: true
+// :doctype: book
+Volker.Benders@baloise.de, 27.11.2025
+//:revealjs_theme: black
+:revealjs_theme: solarized
+:revealjs_transition: slide
+:source-highlighter: highlightjs
+:icons: font
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.5.0
+:source-highlighter: highlight.js
+:revealjs_slideNumber: true,c/t
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_progress: true
+:revealjs_center: true
+:revealjs_controls: true
+:revealjs_keyboard: true
+:revealjs_overview: true
+
+
+
+
+include::sections/title.adoc[]
+
+include::sections/diagrams.adoc[]
+
+include::sections/columns.adoc[]
+
+include::includes/mcp_architektur.adoc[]
+
+include::sections/mcp_sequence.adoc[]
+
+include::sections/conclusion.adoc[]

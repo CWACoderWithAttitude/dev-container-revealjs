@@ -24,7 +24,8 @@
         "adpyke.codesnap",
         "ritwickdey.LiveServer",
         "yandeu.five-server",
-        "asciidoctor.asciidoctor-vscode"
+        "asciidoctor.asciidoctor-vscode",
+        "google.geminicodeassist"
       ]
     }
   },

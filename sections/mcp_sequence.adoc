@@ -1,0 +1,37 @@
+== MCP Server Sequence Diagram
+
+=== How MCP Servers Work
+
+[mermaid, width="80%", height="500"]
+----
+sequenceDiagram
+    participant Client
+    participant MCP as MCP Server
+    participant Resource as Resource Handler
+    
+    Client->>MCP: Initialize Connection
+    activate MCP
+    MCP->>MCP: Load Configuration
+    MCP-->>Client: Ready
+    deactivate MCP
+    
+    Client->>MCP: Request Resource
+    activate MCP
+    MCP->>Resource: Fetch Data
+    activate Resource
+    Resource-->>MCP: Return Data
+    deactivate Resource
+    MCP-->>Client: Send Response
+    deactivate MCP
+    
+    Client->>MCP: Execute Tool
+    activate MCP
+    MCP->>Resource: Process Tool
+    activate Resource
+    Resource-->>MCP: Tool Result
+    deactivate Resource
+    MCP-->>Client: Tool Output
+    deactivate MCP
+----
+
+---

@@ -1,0 +1,31 @@
+== Multi-Column Layouts
+
+[cols="1,1"]
+|===
+| *Column 1*
+| *Column 2*
+
+| Feature A
+| Feature B
+
+| Description of A
+| Description of B
+
+| Benefit 1
+| Benefit 2
+|===
+
+=== Side-by-Side Content
+
+[cols="50%,50%"]
+|===
+| Left Content
+| Right Content
+
+| Code example +
+`let x = 42;`
+| Output +
+`x = 42`
+|===
+
+---

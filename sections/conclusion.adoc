@@ -1,0 +1,15 @@
+== Key Takeaways
+
+* AsciiDoctor provides powerful presentation capabilities
+* Modular structure keeps content organized
+* Combine diagrams, tables, and columns for rich content
+* Easy to maintain and version control
+
+Thank you!
+
+[NOTE.speaker]
+--
+Remember to summarize the key points and open the floor for questions.
+--
+
+---

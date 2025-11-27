@@ -1,0 +1,27 @@
+== Diagrams & Visualizations
+
+=== PlantUML Example
+
+[plantuml]
+----
+@startuml
+!theme plain
+rectangle "Client" as client
+rectangle "Server" as server
+client --> server: Request
+server --> client: Response
+@enduml
+----
+
+=== Mermaid Diagram
+
+[mermaid]
+----
+graph TD
+    A[Start] --> B[Process]
+    B --> C[Decision]
+    C -->|Yes| D[End]
+    C -->|No| B
+----
+
+---
