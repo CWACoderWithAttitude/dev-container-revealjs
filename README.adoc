@@ -1,5 +1,19 @@
 = ASCIIDoctor+Reveal.js Presentations
 
+== Dev
+For instant feedback run 
+```bash
+> node ./watcher2.js
+
+(node:45932) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///src/watcher2.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /src/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+File added: README.adoc
+...
+```
+
+This watches all asciidoc files for changes and triggers rebuilding the presentation.
 
 == Links
 * https://docs.asciidoctor.org/reveal.js-converter/latest/setup/standalone-executable/[Standalone Executable]

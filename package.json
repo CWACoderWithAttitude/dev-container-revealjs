@@ -13,6 +13,7 @@
   "scripts": {
     "watch:adoc": "chokidar \"*/*.adoc\" -c \"make convert\" --initial",
     "check": "npx asciidoctor-revealjs --version",
-    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki mcp-servers2_de.adoc"
+    "compile": "npx asciidoctor-revealjs -r asciidoctor-kroki mcp-servers2_de.adoc",
+    "watcher2": "node ./watcher2.js"
   }
 }
