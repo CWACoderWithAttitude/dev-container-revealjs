@@ -1,0 +1,10 @@
+== Solution:
+*Model Context Protocol (MCP)*
+
+=== What's MCP?
+
+[.step]
+* MCP Servers add access to resources like files, databases, APIs, and tools.
+* They communicate with LLMs using a standardized protocol.
+* MCP enables LLMs to perform actions and access up-to-date information.
+

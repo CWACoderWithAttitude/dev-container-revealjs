@@ -1,0 +1,4 @@
+== How do LLMs work?
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Piles_of_abandoned_historical_papers_%2832929137350%29.jpg/2560px-Piles_of_abandoned_historical_papers_%2832929137350%29.jpg[LLM Basics]
+LLMs are neural networks trained on massive amounts of text to predict the next word in a sequence. They learn patterns in language by adjusting billions of internal parameters during training, enabling them to generate coherent responses by repeatedly predicting one word at a time. When you send a prompt, the model processes it as numerical tokens and uses these learned patterns to calculate probabilities for what should come next, generating text that statistically resembles human language.

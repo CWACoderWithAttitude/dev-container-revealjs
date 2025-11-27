@@ -1,9 +1,9 @@
 version: "3.7"
 
 services:
-  nodejs-dev:
-    container_name: nodejs-dev
-    hostname: nodejs-dev.local
+  revealjs-slides:
+    container_name: revealjs-slides
+    hostname: revealjs-slides.local
     build:
       context: .
     working_dir: /src
@@ -12,7 +12,7 @@ services:
     command: >
       bash -c "sleep infinity"
     networks:
-      nodejs-dev-net:
+      revealjs-slides-net:
 
 networks:
-  nodejs-dev-net:
+  revealjs-slides-net:

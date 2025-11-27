@@ -1,0 +1,47 @@
+== Wie arbeiten MCP Server?
+
+Ein Server beschreibt die angebotenen Schnittstellen mittels "normaler" Sprache.
+
+```python
+async def search_stations(self, query: str, max_results: int = 10) -> str:
+        """
+        Search for stations/stops in the RMV network
+        
+        Args:
+            query: Search term (station name, address, or POI)
+            max_results: Maximum number of results to return (default: 10)
+        
+        Returns:
+            JSON string with matching stations including IDs and coordinates
+        """
+        params = {
+            "input": query,
+            "maxNo": max_results,
+            "type": "S"  # S for stations
+        }
+```
+=== Startup
+
+Beim Start des MCP Clients - des Agents oder ChatBots - werden diese Beschreibungen eingelesen.
+
+=== MCP Workflow, I
+    
+[%step]
+1. Der User stellt seine Anfrage über einen Chatbot
+(=> Context)
+2. Durch die Trainingsdaten (=> Model) "versteht" der ChatBot die Anfrage des Users
+3. ChatBot sendet die Anfrage an MCP-Server (=> Protocol)
+//4. MCP Server Based on the User context the AI decides which MCP Server to call
+
+=== MCP Workflow, II
+
+[.step]
+1. Je nach Anfrage "weiss" der Chatbot, welchen 
+MCP Server und welche Schnittstelle er fragen muss.
+2. Evtl. auch mehrfach
+3. MCP Server gibt die Antwort
+4. Der Bot erzeugt die Antwort für den User
+
+
+[.fragment]
+✨ *Ergebnis:* Der User erhält aktuelle Informationen und Aktionen, die von der KI ausgeführt werden!

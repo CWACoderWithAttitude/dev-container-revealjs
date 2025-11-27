@@ -1,0 +1,44 @@
+== Woher kommen die MCP Server?
+
+Anthropic wollte eine schnelle Akzeptanz erreichen:
+[%step]
+* Das verwendete Protokoll wurde Open Source gestellt.
+* SDKs für die gängigen Programmiersprachen wurden veröffentlicht.
+* Zur Vorstellung 11/24 wurden Beispiel-Implementierungen veröffentlicht.
+
+=== Buy or Build?!
+
+Kaufen passt hier oft nicht ganz.
+
+Das meiste ist frei verfügbar.
+
+Die Auswahl einsatzbereiter MCP Servern wächst beständig.
+
+=== Zur Verfügung stehen MCP Server für
+
+[%step]
+* https://devblogs.microsoft.com/microsoft365dev/announcing-the-updated-teams-ai-library-and-mcp-support/[MS Teams]
+* Wikipedia
+* Playwright zur Browser-Steuerung
+* Unternehmensdokumente (z.B. https://mcpmarket.com/server/sharepoint[MCP Server für Sharepoint])
+* CRM Systeme (z.B. Salesforce)
+* https://openapi.de/mcp[MCP OPENAPI - Gib deinem KI-Chatbot Superkräfte!]
+
+=== Obacht!
+
+Gerade bei internen Datenquellen geht es oft um hoch brisante Daten.
+
+Oder um sensible geschäftskritische Daten.
+
+Ob diese nun mit einem MCP Server erschlossen werden sollen, ist sorgfältig zu prüfen.
+
+=== Selber machen
+
+Wem ferige MCP Server nicht genügen bzw. nicht geheuer sind, der kann selber einen MCP Server bauen.
+
+[%step]
+* Es gibt https://modelcontextprotocol.io/docs/sdk[SDKs (Software Development Kits) für die gängigen Sprachen].
+* Zum lokalen Testen steht ein Inspektor zur Verfügung
+* Beispiel-Implementierungen stehen bereit.
+* Es gibt eine starke Community.
+

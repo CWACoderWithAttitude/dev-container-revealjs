@@ -1,0 +1,36 @@
+== Worum geht es bei MCP?
+
+MCP Server erweitern 
+
+die Fähigkeiten 
+
+von KI-gestützten Chatbots.
+
+=== Wozu?!
+
+MCP Server ermöglichen es Unternehmen 
+
+Daten zu erschliessen,
+
+die einem traditionellen LLM (Large Language Model) nicht zur Verfügung stehen.
+
+
+=== USB-C für KI
+
+MCP Server sind Vermittler zwischen dem LLM und externen Datenquellen
+
+=== Beipiele 
+
+Zugriff auf
+
+[%step]
+* firmeneigene Dokumente
+* Sharepoint
+* ERP-Systeme
+* Buchhaltungssysteme
+* Datenbanken
+* APIs
+* Jiras / Confluence
+
+
+

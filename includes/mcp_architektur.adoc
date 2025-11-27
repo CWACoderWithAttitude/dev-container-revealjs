@@ -1,0 +1,4 @@
+== Architektur von MCP Servern
+
+//image:images/Neural_network.svg.png[] 
+image:images/mcp-server-env.png[]

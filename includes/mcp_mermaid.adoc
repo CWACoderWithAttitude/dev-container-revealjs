@@ -1,0 +1,13 @@
+== MCP Mermaid Diagrams
+
+[mermaid, mermaid-diagram-1, svg]
+....
+graph TD
+    A[LLM] -->|MCP Protocol| B(MCP Server)
+    B --> C{Resources}
+    C --> D[Files]
+    C --> E[Databases]
+    C --> F[APIs]
+    C --> G[Tools]
+    B -->|Responses| A
+....

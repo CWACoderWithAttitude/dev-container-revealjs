@@ -1,0 +1,241 @@
+= MCP Server: Eine Einführung
+//:revealjs_theme: black
+:revealjs_theme: solarized
+:revealjs_slideNumber: true
+:revealjs_transition: slide
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.5.0
+:source-highlighter: highlight.js
+:revealjs_slideNumber: true,c/t
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_progress: true
+:revealjs_center: true
+:revealjs_controls: true
+:revealjs_keyboard: true
+:revealjs_overview: true
+
+
+== Was ist MCP?
+
+
+[.notes]
+--
+MCP steht für Model Context Protocol
+--
+
+* **MCP** = Model Context Protocol
+* Ein offener Standard von Anthropic
+* Verbindet KI-Assistenten mit verschiedenen Datenquellen
+* Macht KI-Systeme flexibler und leistungsfähiger
+
+== Das Problem ohne MCP
+
+[%step]
+* KI-Assistenten arbeiten isoliert
+* Kein Zugriff auf externe Daten
+* Keine Verbindung zu anderen Systemen
+* Jede Integration muss einzeln programmiert werden
+
+== Die Lösung: MCP Server
+
+image::https://cdn-icons-png.flaticon.com/512/1087/1087815.png[width=200]
+
+[%step]
+* **MCP Server** = Vermittler zwischen KI und Datenquellen
+* Standardisierte Schnittstelle
+* Wiederverwendbar für verschiedene KI-Systeme
+* Einfache Integration
+
+== Wie funktioniert ein MCP Server?
+
+[source,text]
+----
+┌─────────────┐
+│ KI-Assistent│
+│  (Claude)   │
+└──────┬──────┘
+       │
+   MCP Protokoll
+       │
+┌──────▼──────┐
+│ MCP Server  │
+└──────┬──────┘
+       │
+   ┌───┴───┬───────┬────────┐
+   │       │       │        │
+┌──▼──┐ ┌─▼──┐ ┌─▼───┐ ┌──▼───┐
+│Datei│ │API │ │Cloud│ │Daten-│
+│-sys.│ │    │ │     │ │bank  │
+└─────┘ └────┘ └─────┘ └──────┘
+----
+
+== Beispiele für MCP Server
+
+[%step]
+* **Dateisystem-Server**: Zugriff auf lokale Dateien
+* **Datenbank-Server**: Abfragen von SQL-Datenbanken
+* **API-Server**: Verbindung zu Webdiensten
+* **Cloud-Server**: Zugriff auf Google Drive, Dropbox, etc.
+* **RMV-Server**: Fahrplanauskünfte für den Nahverkehr
+
+== Praktisches Beispiel: RMV Server
+
+Ein MCP Server für öffentliche Verkehrsmittel in Frankfurt
+
+[%step]
+* Stationen suchen
+* Verbindungen finden
+* Fahrpläne abrufen
+* Alles direkt über den KI-Assistenten
+
+== Demo: Station suchen
+
+[source,python]
+----
+# Der MCP Server im Hintergrund:
+def search_stations(query):
+    # Suche nach Stationen
+    results = rmv_api.search(query)
+    return results
+
+# Was der Nutzer sieht:
+"Finde die Station 'Hauptwache'"
+# → Ergebnis mit allen Details
+----
+
+== Vorteile von MCP Servern
+
+[.columns]
+====
+[.column]
+--
+**Für Entwickler:**
+
+* Einmal entwickeln
+* Mehrfach verwenden
+* Standardisiert
+* Open Source
+--
+
+[.column]
+--
+**Für Nutzer:**
+
+* Mehr Funktionen
+* Einfache Bedienung
+* Flexible Integration
+* Erweiterbar
+--
+====
+
+== Architektur eines MCP Servers
+
+[source,text]
+----
+MCP Server besteht aus:
+
+1. Tools (Funktionen)
+   → Was kann der Server?
+
+2. Resources (Daten)
+   → Welche Daten bietet er?
+
+3. Prompts (Vorlagen)
+   → Wie nutzt man ihn optimal?
+----
+
+== MCP Server erstellen
+
+Grundstruktur in Python:
+
+[source,python]
+----
+from mcp.server import Server
+from mcp.types import Tool
+
+# Server erstellen
+server = Server("mein-server")
+
+# Tool hinzufügen
+@server.call_tool()
+async def meine_funktion(argument):
+    # Deine Logik hier
+    return ergebnis
+----
+
+== Verfügbare MCP Server
+
+Große Auswahl bereits verfügbar:
+
+* GitHub MCP Server
+* Slack MCP Server
+* Google Drive MCP Server
+* PostgreSQL MCP Server
+* Filesystem MCP Server
+* ...und viele mehr!
+
+== MCP Server installieren
+
+[source,bash]
+----
+# Via pip (Python)
+pip install mcp-server-name
+
+# Via npm (Node.js)
+npm install @modelcontextprotocol/server-name
+
+# In Claude Desktop konfigurieren
+# → claude_desktop_config.json
+----
+
+== Sicherheit bei MCP Servern
+
+[%step]
+* MCP Server laufen lokal auf deinem Computer
+* Du kontrollierst, welche Daten geteilt werden
+* Berechtigungen können eingeschränkt werden
+* Open Source = transparenter Code
+
+== Use Cases
+
+**Wofür kann man MCP Server nutzen?**
+
+[%step]
+* Dokumentenanalyse aus verschiedenen Quellen
+* Automatisierte Datenbankabfragen
+* Integration von Unternehmenssystemen
+* Workflows zwischen verschiedenen Tools
+* Personalisierte KI-Assistenten
+
+== Die Zukunft von MCP
+
+[%step]
+* Wachsendes Ökosystem
+* Mehr Server von der Community
+* Bessere Integration in Tools
+* Standard für KI-Integrationen
+* Einfachere Entwicklung
+
+== Zusammenfassung
+
+**MCP Server ermöglichen:**
+
+* ✓ Verbindung zwischen KI und Datenquellen
+* ✓ Standardisierte Integration
+* ✓ Wiederverwendbare Komponenten
+* ✓ Flexible Erweiterungen
+* ✓ Sichere lokale Ausführung
+
+== Ressourcen & Links
+
+* **Offizielle Dokumentation**: https://modelcontextprotocol.io
+* **GitHub Repository**: https://github.com/modelcontextprotocol
+* **MCP Server Verzeichnis**: https://github.com/modelcontextprotocol/servers
+* **Claude Desktop**: https://claude.ai/download
+
+== Fragen?
+
+[.big-text]
+Vielen Dank für die Aufmerksamkeit!
+
+💡 Probiere MCP Server selbst aus!

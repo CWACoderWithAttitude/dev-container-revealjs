@@ -1,0 +1,21 @@
+== Wer hat's erfunden?
+[%step]
+[.text-center]
+* Erfunden / entwickelt wurde MCP von Anthropic.
+* Und im November 2024 vorgestellt.
+
+[.text-center]
+
+=== Was ist das Besondere daran?
+
+[%step]
+* Natürlicher Zugang zu externen Datenquellen.
+* Anstelle komplexer API / SQL Abfragen stehen einfache Text-Prompts.
+* MCP ist Open Source und offen.
+* kein m*n-Problem mehr
+
+[.notes]
+--
+ LLMs können nur auf die Daten zugreifen, mit denen sie trainiert wurden
+--
+

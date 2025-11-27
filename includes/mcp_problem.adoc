@@ -1,0 +1,35 @@
+== The Problem
+
+LLMs - LargeLanguageModels - are more or less limited to the data they were trained on. 
+
+//That means traditional LLMs have several limitations when it comes to solving real-world business problems: 
+
+[.step]
+* They can't access up-to-date information
+* They can't perform actions on external systems
+* They can't utilize specialized tools or services  
+[NOTE.speaker]
+---
+ LLMs können nur auf die Daten zugreifen, mit denen sie trainiert wurden
+---
+
+//- They are limited to their training data
+//- `Grounding` is no real solution for business problems.
+//- They have no built-in access to external data or tools.
+// Integrating them with various services requires custom code for each service, leading to high maintenance and scalability issues.
+
+=== Ohne MCP
+
+[.step]
+* Each Integration requires custom code.
+* No standardization
+* Hard to maintain
+* Difficult to scale
+[NOTE.speaker]
+--
+Stellen Sie sich vor, Sie müssten für jede App auf Ihrem Smartphone eine eigene Sprache lernen
+--
+
+=== !
+
+image::https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Chaos[Chaos ohne Standard]

@@ -1,0 +1,6 @@
+== Worum geht es bei MCP?
+
+[%step]
+* Sie ermöglichen den Zugriff auf externe Datenquellen
+* Datenquellen wie Datenbanken, APIs oder Dateisysteme
+* Sie führen spezifische Aufgaben aus und
